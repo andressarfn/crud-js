@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- formulário -->
+    <div>
+      <h1>Cadastro de Clientes</h1>
+      <form autocomplete="off">
+        <label>Nome Completo</label>
+        <input type="text" name="fullName" id="fullName" /><br />
+        <label>Telefone</label>
+        <input type="text" name="phone" id="phone" data-js="phone" /><br />
+        <label>CEP</label>
+        <input
+          type="text"
+          name="zipCode"
+          id="zipCode"
+          data-js="zipCode"
+        /><br />
+        <label>Endereço</label>
+        <input type="text" name="address" id="address" /><br />
+        <label>Número</label>
+        <input type="text" name="number" id="number" /><br />
+        <label>Cidade</label>
+        <input type="text" name="city" id="city" /><br />
+        <label>Estado</label>
+        <input type="text" name="state" id="state" /><br />
+        <label>País</label>
+        <input type="text" name="country" id="country" /><br />
+
+        <input type="submit" value="Salvar" />
+      </form>
+    </div>
+
+    <!-- tabela de cliente -->
+    <div>
+      <table class="list" id="attList">
+        <caption>
+          Clientes cadastrados
+        </caption>
+        <thead>
+          <tr>
+            <th>Nome Completo</th>
+            <th>Telefone</th>
+            <th>CEP</th>
+            <th>Endereço</th>
+            <th>Número</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>País</th>
+            <th rowspan="2">Opções</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="js/clientRegister.js"></script>
+  </body>
+</html>
