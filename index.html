@@ -14,7 +14,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- css bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-16x16.png"
+      type="image/x-icon"
+    />
     <title>Login</title>
   </head>
   <body>
@@ -22,7 +26,9 @@
       <div class="row">
         <div class="col align-self-center">
           <h1>Entrar</h1>
+          <!-- formulário de login  -->
           <form autocomplete="off">
+            <!-- input de email -->
             <div class="form-floating mb-3">
               <input
                 type="email"
@@ -33,21 +39,23 @@
               />
               <label for="emailLogin">E-mail</label>
             </div>
+            <!-- input de senha -->
             <div class="form-floating">
               <input
                 type="password"
-                name="senhaLogin"
-                id="senhaLogin"
+                name="passwordLogin"
+                id="passwordLogin"
                 class="form-control"
                 placeholder="Password"
               />
-              <label for="senhaLogin">Senha</label>
-
+              <label for="passwordLogin">Senha</label>
+              <!-- input de submit -->
               <input
                 type="submit"
                 class="btn btn-primary mb-3"
                 value="Entrar"
               />
+              <!-- input de cadastrar -->
               <input
                 type="button"
                 class="btn btn-primary mb-3"

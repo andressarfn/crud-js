@@ -14,15 +14,22 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- css bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-16x16.png"
+      type="image/x-icon"
+    />
     <title>Cadastrar</title>
   </head>
-  <body>
+
     <div class="container col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-8">
       <div class="row">
         <div class="col align-self-center">
           <h1>Cadastrar</h1>
+          <body>
+            <!-- formulário de cadastro -->
           <form autocomplete="off">
+            <!-- input do nome -->
             <div class="form-floating mb-3">
               <input
                 type="text"
@@ -33,6 +40,7 @@
               />
               <label for="nameRegister">Nome</label>
             </div>
+            <!-- input de email -->
             <div class="form-floating mb-3">
               <input
                 type="email"
@@ -43,6 +51,7 @@
               />
               <label for="emailRegister">E-mail</label>
             </div>
+            <!-- input de senha -->
             <div class="form-floating mb-3">
               <input
                 type="password"
@@ -53,15 +62,22 @@
               />
               <label for="passwordRegister">Senha</label>
             </div>
+            <!-- input de submit -->
             <input
               type="submit"
               class="btn btn-primary mb-3"
               value="Cadastrar"
             />
+            <!-- input para redirecionar a página para index.html -->
+            <input
+              type="button"
+              class="btn btn-primary mb-3"
+              value="Voltar"
+              onclick="backLogin()"
+            />
           </form>
         </div>
       </div>
     </div>
-    <script src="js/register.js"></script>
   </body>
 </html>

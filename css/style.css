@@ -31,8 +31,9 @@ form input {
 }
 
 .container {
-  height: 500px;
+  height: 550px;
   margin-top: 100px;
+  margin-bottom: 50px;
   background: #f7f7f7;
   border: 1px solid #dcdce6;
   border-radius: 10px;

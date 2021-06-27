@@ -15,16 +15,22 @@
     <link rel="stylesheet" href="css/styleClientRegister.css" />
     <!-- css bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-16x16.png"
+      type="image/x-icon"
+    />
     <title>Cadastro de Cliente</title>
   </head>
   <body>
-    <!-- formulário -->
     <div class="container">
       <div class="row">
         <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12">
           <h3>Cadastro de clientes</h3>
+          <!-- formulário de preenchimento da tabela -->
           <form autocomplete="off">
             <div class="form-floating mb-3">
+              <!-- inputs para preencher as tabelas -->
               <input
                 type="text"
                 name="fullName"
@@ -116,20 +122,22 @@
               />
               <label for="country">País</label>
             </div>
+            <!-- input de submit da tabela -->
             <input type="submit" class="btn btn-primary mb-3" value="Salvar" />
+            <!-- input para redirecionar a página para o index.html -->
             <input
               type="button"
-              onclick="backLogin()"
               class="btn btn-primary mb-3"
               value="Voltar"
+              onclick="backLogin()"
             />
           </form>
         </div>
-        <!-- tabela de cliente -->
         <div
           class="col-xxl-8 col-xl-8 col-lg-8 ccol-md-12 col-sm-12"
           id="divTable"
         >
+          <!-- tabela de clientes -->
           <table class="table table-striped" id="attList">
             <thead>
               <tr>

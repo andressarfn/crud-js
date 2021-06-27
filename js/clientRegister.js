@@ -101,7 +101,7 @@ const resetInput = () => {
   let selectedRow = null;
 };
 
-// para editar
+// função para editar
 const editClient = (td) => {
   selectedRow = td.parentElement.parentElement;
   document.getElementById('fullName').value = selectedRow.cells[0].innerHTML;
@@ -115,7 +115,7 @@ const editClient = (td) => {
   document.getElementById('country').value = selectedRow.cells[8].innerHTML;
 };
 
-// atualizando os dados do cliente
+// função para atualizar os dados
 const updateClient = (updateData) => {
   selectedRow.cells[0].innerHTML = updateData.fullName;
   selectedRow.cells[1].innerHTML = updateData.phone;
@@ -128,7 +128,7 @@ const updateClient = (updateData) => {
   selectedRow.cells[8].innerHTML = updateData.country;
 };
 
-// deletando os dados do cliente
+// função para deletar o cliente
 const deleteClient = (td) => {
   if (confirm('Você quer deletar este cliente?')) {
     row = td.parentElement.parentElement;
@@ -167,7 +167,7 @@ const masksInputs = () => {
     );
   });
 };
-
+// função para buscar a API para completar os dados de endereço
 const searchZipCode = async () => {
   const cep = document.getElementById('zipCode').value;
   const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -175,32 +175,14 @@ const searchZipCode = async () => {
   const addressData = await data.json();
   autocompleteForm(addressData);
 };
-
+// função para autocomplete dos dados a partir da API
 const autocompleteForm = (addressData) => {
   document.getElementById('address').value = addressData.logradouro;
   document.getElementById('city').value = addressData.localidade;
   document.getElementById('state').value = addressData.uf;
   document.getElementById('district').value = addressData.bairro;
 };
-
+// função para redirecioinar a página para o index.html
 const backLogin = () => {
   window.location.href = 'index.html';
 };
-
-// validando os campos
-// const validate = () => {
-//   isValid = false;
-//   if (document.getElementById('fullname').value == '') {
-//     isValid = true;
-//     document.getElementById('fullNameValidationError').classList.remove('hide');
-//   } else {
-//     isValid = false;
-//     if (
-//       !document
-//         .getElementById('fullNameValidationError')
-//         .classList.contains('hide')
-//     )
-//       document.getElementById('fullNameValidationError').classList.add('hide');
-//   }
-//   return isValid;
-// };
