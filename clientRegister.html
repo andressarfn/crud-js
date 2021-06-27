@@ -4,61 +4,151 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- script js -->
+    <script src="js/clientRegister.js"></script>
+    <!-- script bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- script jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/styleClientRegister.css" />
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- formulário -->
-    <div>
-      <h1>Cadastro de Clientes</h1>
-      <form autocomplete="off">
-        <label>Nome Completo</label>
-        <input type="text" name="fullName" id="fullName" /><br />
-        <label>Telefone</label>
-        <input type="text" name="phone" id="phone" data-js="phone" /><br />
-        <label>CEP</label>
-        <input
-          type="text"
-          name="zipCode"
-          id="zipCode"
-          data-js="zipCode"
-        /><br />
-        <label>Endereço</label>
-        <input type="text" name="address" id="address" /><br />
-        <label>Número</label>
-        <input type="text" name="number" id="number" /><br />
-        <label>Cidade</label>
-        <input type="text" name="city" id="city" /><br />
-        <label>Estado</label>
-        <input type="text" name="state" id="state" /><br />
-        <label>País</label>
-        <input type="text" name="country" id="country" /><br />
-
-        <input type="submit" value="Salvar" />
-      </form>
-    </div>
-
-    <!-- tabela de cliente -->
-    <div>
-      <table class="list" id="attList">
-        <caption>
-          Clientes cadastrados
-        </caption>
-        <thead>
-          <tr>
-            <th>Nome Completo</th>
-            <th>Telefone</th>
-            <th>CEP</th>
-            <th>Endereço</th>
-            <th>Número</th>
-            <th>Cidade</th>
-            <th>Estado</th>
-            <th>País</th>
-            <th rowspan="2">Opções</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-4 col-xl-4 col-lg-12 col-md-12 col-sm-12">
+          <h3>Cadastro de clientes</h3>
+          <form autocomplete="off">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                class="form-control"
+                placeholder="Nome completo"
+              />
+              <label for="emailLogin">Nome </label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                data-js="phone"
+                class="form-control"
+                placeholder="Telefone"
+              />
+              <label for="phone">Telefone</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="zipCode"
+                id="zipCode"
+                data-js="zipCode"
+                class="form-control"
+                placeholder="CEP"
+              />
+              <label for="zipCode">CEP</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="address"
+                id="address"
+                class="form-control"
+                placeholder="address"
+              />
+              <label for="address">Enderço</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="number"
+                id="number"
+                class="form-control"
+                placeholder="number"
+              />
+              <label for="number">Número</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="district"
+                id="district"
+                class="form-control"
+                placeholder="district"
+              />
+              <label for="district">Bairro</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="form-control"
+                placeholder="city"
+              />
+              <label for="city">Cidade</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="state"
+                id="state"
+                class="form-control"
+                placeholder="state"
+              />
+              <label for="state">Estado</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="country"
+                id="country"
+                class="form-control"
+                placeholder="country"
+              />
+              <label for="country">País</label>
+            </div>
+            <input type="submit" class="btn btn-primary mb-3" value="Salvar" />
+            <input
+              type="button"
+              onclick="backLogin()"
+              class="btn btn-primary mb-3"
+              value="Voltar"
+            />
+          </form>
+        </div>
+        <!-- tabela de cliente -->
+        <div
+          class="col-xxl-8 col-xl-8 col-lg-8 ccol-md-12 col-sm-12"
+          id="divTable"
+        >
+          <table class="table table-striped" id="attList">
+            <thead>
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">CEP</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Número</th>
+                <th scope="col">Bairro</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+                <th scope="col">País</th>
+                <th scope="col" rowspan="2">Opções</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script src="js/clientRegister.js"></script>

@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap');
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
 }
-body {
-  font: 400 14px Roboto, sans-serif;
-  background: #f7f7f7;
-  -webkit-font-smoothing: antialiased;
-}
 a {
   cursor: pointer;
   text-decoration: underline;
-  color: #0000ee;
   margin-right: 4px;
 }
 button {
@@ -31,13 +24,21 @@ form input {
 }
 
 .container {
-  height: 500px;
+  height: 980px;
   margin-top: 100px;
   background: #f7f7f7;
   border: 1px solid #dcdce6;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 30px;
 }
-.container h1 {
+
+.container h3 {
+  padding-bottom: 30px;
+}
+.row {
   padding: 40px;
+}
+table {
+  margin-top: 30px;
 }

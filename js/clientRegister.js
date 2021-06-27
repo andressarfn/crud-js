@@ -50,6 +50,7 @@ const readFormData = () => {
   formData['zipCode'] = document.getElementById('zipCode').value;
   formData['address'] = document.getElementById('address').value;
   formData['number'] = document.getElementById('number').value;
+  formData['district'] = document.getElementById('district').value;
   formData['city'] = document.getElementById('city').value;
   formData['state'] = document.getElementById('state').value;
   formData['country'] = document.getElementById('country').value;
@@ -73,13 +74,15 @@ const insertNewClient = (data) => {
   row5 = newRow.insertCell(4);
   row5.innerHTML = data.number;
   row6 = newRow.insertCell(5);
-  row6.innerHTML = data.city;
+  row6.innerHTML = data.district;
   row7 = newRow.insertCell(6);
-  row7.innerHTML = data.state;
+  row7.innerHTML = data.city;
   row8 = newRow.insertCell(7);
-  row8.innerHTML = data.country;
+  row8.innerHTML = data.state;
   row9 = newRow.insertCell(8);
-  row9.innerHTML = `<a onClick="editClient(this)">Editar</a>
+  row9.innerHTML = data.country;
+  row10 = newRow.insertCell(9);
+  row10.innerHTML = `<a onClick="editClient(this)">Editar</a>
                     <a onclick="deleteClient(this)">Exlcuir</a>`;
 };
 
@@ -90,6 +93,7 @@ const resetInput = () => {
   document.getElementById('zipCode').value = '';
   document.getElementById('address').value = '';
   document.getElementById('number').value = '';
+  document.getElementById('district').value = '';
   document.getElementById('city').value = '';
   document.getElementById('state').value = '';
   document.getElementById('country').value = '';
@@ -105,9 +109,10 @@ const editClient = (td) => {
   document.getElementById('zipCode').value = selectedRow.cells[2].innerHTML;
   document.getElementById('address').value = selectedRow.cells[3].innerHTML;
   document.getElementById('number').value = selectedRow.cells[4].innerHTML;
-  document.getElementById('city').value = selectedRow.cells[5].innerHTML;
-  document.getElementById('state').value = selectedRow.cells[6].innerHTML;
-  document.getElementById('country').value = selectedRow.cells[7].innerHTML;
+  document.getElementById('district').value = selectedRow.cells[5].innerHTML;
+  document.getElementById('city').value = selectedRow.cells[6].innerHTML;
+  document.getElementById('state').value = selectedRow.cells[7].innerHTML;
+  document.getElementById('country').value = selectedRow.cells[8].innerHTML;
 };
 
 // atualizando os dados do cliente
@@ -117,9 +122,10 @@ const updateClient = (updateData) => {
   selectedRow.cells[2].innerHTML = updateData.zipCode;
   selectedRow.cells[3].innerHTML = updateData.address;
   selectedRow.cells[4].innerHTML = updateData.number;
-  selectedRow.cells[5].innerHTML = updateData.city;
-  selectedRow.cells[6].innerHTML = updateData.state;
-  selectedRow.cells[7].innerHTML = updateData.country;
+  selectedRow.cells[5].innerHTML = updateData.district;
+  selectedRow.cells[6].innerHTML = updateData.city;
+  selectedRow.cells[7].innerHTML = updateData.state;
+  selectedRow.cells[8].innerHTML = updateData.country;
 };
 
 // deletando os dados do cliente
@@ -132,7 +138,6 @@ const deleteClient = (td) => {
 };
 
 //mascára para os inputs de telefone e cep
-
 const masksInputs = () => {
   const masks = {
     phone(value) {
@@ -175,6 +180,11 @@ const autocompleteForm = (addressData) => {
   document.getElementById('address').value = addressData.logradouro;
   document.getElementById('city').value = addressData.localidade;
   document.getElementById('state').value = addressData.uf;
+  document.getElementById('district').value = addressData.bairro;
+};
+
+const backLogin = () => {
+  window.location.href = 'index.html';
 };
 
 // validando os campos
