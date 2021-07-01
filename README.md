@@ -21,7 +21,7 @@ login, cadastro e crud utilizando html, css, bootstrap e javascript puro 💜
   
 ## ✒️ Autores
 
-* **Andressa Ribeiro** - [desenvolvedoraFrontEnd](https://github.com/andressarfn)
+* **Andressa Ribeiro** - [desenvolvedora](https://github.com/andressarfn)
 
 ## 🎁 Expressões de gratidão
 
