@@ -30,6 +30,5 @@ login, cadastro e crud utilizando html, css, bootstrap e javascript puro 💜
 * Compartilhe, se de alguma forma te ajudar 🤓
 * etc.
 
-
 ---
 ⌨️ com ❤️ por [Andressa Ribeiro](https://github.com/andressarfn) 😊
