@@ -1,4 +1,4 @@
-# serviceNet
+# CRUD JS
 login, cadastro e crud utilizando html, css, bootstrap e javascript puro 💜
 
 ## 🚀 Como iniciar
