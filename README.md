@@ -3,7 +3,7 @@ login, cadastro e crud utilizando html, css, bootstrap e javascript puro 💜
 
 ## 🚀 Como iniciar
 
-1. git clone https://github.com/andressarfn/serviceNet.git
+1. git clone https://github.com/andressarfn/crud-js
 2. cd vendor 
 3. Abra o index.html
 
